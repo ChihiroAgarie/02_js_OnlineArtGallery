@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <title>韓国イケメンが尊い</title>
+</head>
+
+<body>
+  <!-- スタート画面 -->
+  <div id="wrapper">
+    <div id="start">
+      <header>
+        <h1>推せる韓国イケメンを探そう</h1>
+      </header>
+      <main>
+        <div id="main">
+          <p>いまこの時代に必要なのは、<br>日々の生活を潤してくれる<br>尊い“推し”の存在なのかもしれません。
+          </p>
+          <p>魅力あふれる韓国イケメンを<br>“推す”旅に出ませんか？</p>
+          <div id="main_btn">
+            <input type="button" value="スタート" id="clickBtn">
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- 名前入力 -->
+    <div id="nameArea_wrapper">
+      <div id="nameArea">
+        <p>まずは名前を入力してね！</p>
+        <input type="text" name="name" id="name" value="">
+      </div>
+      <div id="name_btn">
+        <input type="button" value="次へ" id="nameBtn">
+      </div>
+    </div>
+
+    <!-- コンテンツ1 -->
+    <div id="contentsArea1">
+      <div id="dialogue_wrapper">
+        <div id="dialogue_left">
+          <div id="dialogue_left_inner">
+            <p id="dialogue1">私の名前は、<span id="nameShow"></span>。</p>
+            <p id="dialogue2">推しを探す旅にきたの。</p>
+            <p id="dialogue3">私の推しはどこかしら？？</p>
+          </div>
+        </div>
+        <div id="dialogue_right">
+          <img src="img/shojomanga/color_1.png" alt="主人公">
+        </div>
+      </div>
+      <div id="nextBtn">
+        <input type="button" value="次へ" id="nextBtn1">
+      </div>
+    </div>
+
+    <!-- コンテンツ2 -->
+    <div id="contentsArea2">
+      <p>好きなアイコンをクリックしてね！</p>
+      <div id="building_wrapper">
+        <div id="building_wrapper1">
+          <img src="img/building/building_9.gif" alt="ショッピングモール" id="building_1">
+          <img src="img/building/convini.gif" alt="コンビニ" id="building_2">
+          <img src="img/building/osaka-jo.gif" alt="大阪城" id="building_3">
+        </div>
+        <div id="building_wrapper2">
+          <img src="img/building/pyramid_2.gif" alt="ピラミッド" id="building_4">
+          <img src="img/building/stadium.gif" alt="スタジアム" id="building_5">
+          <img src="img/building/tokyo_tower.gif" alt="東京タワー" id="building_6">
+        </div>
+      </div>
+    </div>
+
+    <!-- コンテンツ3 -->
+    <div id="contentsArea3">
+      <div id="contentsArea3_start">
+        <div id="contentsArea3_img">
+          <img src="img/shojomanga/color_1.png" alt="主人公">
+        </div>
+        <div id="contentsArea3_dialogue">
+          <p id="place">ショッピングモールに来てみたけど、ここに推しはいるのかしら・・？</p>
+          <p id="place2">（辺りをキョロキョロ）</p>
+          <div id="nextBtn3">
+            <input type="button" value="次へ" id="nextBtn3_1">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contentsArea3_2">
+      <p>あなたにぴったりの推しを選ぶよ！<br>好きな人が見つかったらクリック！</p>
+      <div id="contentsArea3_2_img">
+        <div id="handsome_A">
+          <img src="img/handsome/BTS V(テテ).jpeg" alt="" id="handsome_imgA1">
+        </div>
+        <div id="handsome_B">
+          <img src="img/handsome/BTS V(テテ).jpeg" alt="" id="handsome_imgB1">
+        </div>
+      </div>
+      <div id="shuffle_wrapper">
+        <input type="button" value="シャッフル" id="shuffleBtn">
+      </div>
+    </div>
+
+    <div id="contentsArea3_3">
+      <p id="pittari_oshi">あなたにぴったりの推しはこの人！</p>
+      <div id="contentsArea3_3_imgP">
+        <div id="contentsArea3_3_img">
+          <img src="img/handsome/パクソジュン.jpg" alt="" id="chosen_handsome">
+        </div>
+        <div id="contentsArea3_3_dialogue">
+          <p id="handsome_name">パク・ソジュン</p>
+          <p id="handsome_text">梨泰院クラスで人気を博した、旬の俳優。<br>まじでかっこいい。<br>かっこいい。</p>
+          <hr>
+          <p id="handsome_work">代表作など</p>
+          <p id="handsome_work_text">梨泰院クラス<br>あああ<br>あああ</p>
+        </div>
+      </div>
+      <div>
+        <a href="#"><input type="button" value="もう1回" id="againBtn"></a>
+      </div>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <audio src="sound/決定、ボタン押下37.mp3" id="playMusic1"></audio>
+    <audio src="sound/決定、ボタン押下42.mp3" id="playMusic2"></audio>
+  </div>
+</body>
+
+</html>
