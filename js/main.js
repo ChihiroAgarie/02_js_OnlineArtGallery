@@ -1,589 +1,125 @@
-// スタート画面
-$(function () {
-    $('#clickBtn').on('click', () => {
-        $('#nameArea_wrapper').css({ 'visibility': 'visible' });
-        $("#playMusic2").get(0).play();
-    });
-});
-
-
-// 名前入力画面
-$(function () {
-    $('#nameBtn').on('click', () => {
-        $('#contentsArea1').css({ 'visibility': 'visible' });
-        $("#playMusic2").get(0).play();
-    });
-});
-
-$(function () {
-    $(document).on('input', '#name', function (e) {
-        $('#nameShow').text($('#name').val());
-    });
-});
-
-
-// コンテンツ1→2
-$(function () {
-    $('#nextBtn1').on('click', () => {
-        $('#contentsArea2').css({ 'visibility': 'visible' });
-        $("#playMusic2").get(0).play();
-    });
-});
-
-// コンテンツ2→3
-// clickToggleを設定
-$.fn.clickToggle = function (a, b) {
-    return this.each(function () {
-        var clicked = false;
-        $(this).on('click', function () {
-            clicked = !clicked;
-            if (clicked) {
-                return a.apply(this, arguments);
-            }
-            return b.apply(this, arguments);
-        });
-    });
-};
-
-// ショッピングモール
-$(function () {
-    $('#building_1').on('click', () => {
-        $('#contentsArea3').css({ 'visibility': 'visible' });
-        $("#playMusic2").get(0).play();
-        $('#nextBtn3_1').clickToggle(function () {
-            $('#place').text('はっ！もしかして・・あれは・・');
-            $('#place2').text('私の・・推し・・！？');
-            $('#nextBtn3_1').val('推しを選ぶ');
-            $("#playMusic2").get(0).play();
-        }, function () {
-            $('#contentsArea3_2').css({ 'visibility': 'visible' });
-            $("#playMusic2").get(0).play();
-        });
-    });
-});
-
-// コンビニ
-$(function () {
-    $('#building_2').on('click', () => {
-        $('#contentsArea3').css({ 'visibility': 'visible' });
-        $("#playMusic2").get(0).play();
-        $('#contentsArea3_img').css('background-image', 'url("./img/building_bg/convenience store.jpg")');
-        $('#place').text('コンビニスイーツ買いに来たけど、ここに推しはいるのかしら・・？');
-        $('#nextBtn3_1').clickToggle(function () {
-            $('#place').text('はっ！もしかして・・あれは・・');
-            $('#place2').text('私の・・推し・・！？');
-            $('#nextBtn3_1').val('推しを選ぶ');
-            $("#playMusic2").get(0).play();
-        }, function () {
-            $('#contentsArea3_2').css({ 'visibility': 'visible' });
-            $("#playMusic2").get(0).play();
-        });
-    });
-});
-
-// 大阪城
-$(function () {
-    $('#building_3').on('click', () => {
-        $('#contentsArea3').css({ 'visibility': 'visible' });
-        $("#playMusic2").get(0).play();
-        $('#contentsArea3_img').css('background-image', 'url("./img/building_bg/Osaka Castle.jpg")');
-        $('#place').text('大阪城はやっぱえぇわぁ〜。ここに推しはいるのかしら・・？');
-        $('#nextBtn3_1').clickToggle(function () {
-            $('#place').text('はっ！もしかして・・あれは・・');
-            $('#place2').text('私の・・推し・・！？');
-            $('#nextBtn3_1').val('推しを選ぶ');
-            $("#playMusic2").get(0).play();
-        }, function () {
-            $('#contentsArea3_2').css({ 'visibility': 'visible' });
-            $("#playMusic2").get(0).play();
-        });
-    });
-});
-
-// ピラミッド
-$(function () {
-    $('#building_4').on('click', () => {
-        $('#contentsArea3').css({ 'visibility': 'visible' });
-        $("#playMusic2").get(0).play();
-        $('#contentsArea3_img').css('background-image', 'url("./img/building_bg/pyramid.jpg")');
-        $('#place').text('ピラミッドの大きさハンパねぇ〜！ここに推しはいるのかしら・・？');
-        $('#nextBtn3_1').clickToggle(function () {
-            $('#place').text('はっ！もしかして・・あれは・・');
-            $('#place2').text('私の・・推し・・！？');
-            $('#nextBtn3_1').val('推しを選ぶ');
-            $("#playMusic2").get(0).play();
-        }, function () {
-            $('#contentsArea3_2').css({ 'visibility': 'visible' });
-            $("#playMusic2").get(0).play();
-        });
-    });
-});
-
-
-// 野球場
-$(function () {
-    $('#building_5').on('click', () => {
-        $('#contentsArea3').css({ 'visibility': 'visible' });
-        $("#playMusic2").get(0).play();
-        $('#contentsArea3_img').css('background-image', 'url("./img/building_bg/baseball Ground.jpg")');
-        $('#place').text('野球場で飲むビールうめぇ〜！ここに推しはいるのかしら・・？');
-        $('#nextBtn3_1').clickToggle(function () {
-            $('#place').text('はっ！もしかして・・あれは・・');
-            $('#place2').text('私の・・推し・・！？');
-            $('#nextBtn3_1').val('推しを選ぶ');
-            $("#playMusic2").get(0).play();
-        }, function () {
-            $('#contentsArea3_2').css({ 'visibility': 'visible' });
-            $("#playMusic2").get(0).play();
-        });
-    });
-});
-
-// 東京タワー
-$(function () {
-    $('#building_6').on('click', () => {
-        $('#contentsArea3').css({ 'visibility': 'visible' });
-        $("#playMusic2").get(0).play();
-        $('#contentsArea3_img').css('background-image', 'url("./img/building_bg/tokyotower.jpg")');
-        $('#place').text('東京タワーの高さは333m！ここに推しはいるのかしら・・？');
-        $('#nextBtn3_1').clickToggle(function () {
-            $('#place').text('はっ！もしかして・・あれは・・');
-            $('#place2').text('私の・・推し・・！？');
-            $('#nextBtn3_1').val('推しを選ぶ');
-            $("#playMusic2").get(0).play();
-        }, function () {
-            $('#contentsArea3_2').css({ 'visibility': 'visible' });
-            $("#playMusic2").get(0).play();
-        });
-    });
-});
-
-// コンテンツ3-2
-// 画像の乱数を設定
-const img01 = 'img/handsome/BTS V(テテ).jpeg';
-const img02 = 'img/handsome/イ・ドンウク.jpeg';
-const img03 = 'img/handsome/キムスヒョン.jpeg';
-const img04 = 'img/handsome/キムソンホ.jpeg';
-const img05 = 'img/handsome/キムドンヒ.jpeg';
-const img06 = 'img/handsome/コン・ユ.jpeg';
-const img07 = 'img/handsome/ソンガン.jpeg';
-const img08 = 'img/handsome/ソンジュンギ.jpeg';
-const img09 = 'img/handsome/チャ・ウヌ(ASTRO).jpeg';
-const img10 = 'img/handsome/ナムジュヒョク.jpeg';
-const img11 = 'img/handsome/パクソジュン.jpg';
-const img12 = 'img/handsome/パクボゴム.jpeg';
-const img13 = 'img/handsome/ヒョンビン.jpeg';
-
-const images = [
-    img01,
-    img02,
-    img03,
-    img04,
-    img05,
-    img06,
-    img07,
-    img08,
-    img09,
-    img10,
-    img11,
-    img12,
-    img13
+//画像配列
+const ImgList = [
+    { url: 'img/artworks/img01.jpeg', title: 'モナ・リザ', artist: 'レオナルド・ダ・ヴィンチ' },
+    { url: 'img/artworks/img02.jpeg', title: '牛乳を注ぐ女', artist: 'ヨハネス・フェルメール' },
+    { url: 'img/artworks/img03.jpeg', title: '春（ラ・プリマヴェーラ）', artist: 'サンドロ・ボッティチェリ' },
+    { url: 'img/artworks/img04.jpeg', title: '民衆を導く自由の女', artist: 'ウジェーヌ・ドラクロワ' },
+    { url: 'img/artworks/img05.jpeg', title: '富嶽三十六景 神奈川沖浪裏', artist: '葛飾北斎' },
+    { url: 'img/artworks/img06.jpeg', title: '落穂拾い', artist: 'ジャン＝フランソワ・ミレー' },
+    { url: 'img/artworks/img07.jpeg', title: '印象 日の出', artist: 'クロード・モネ' },
+    { url: 'img/artworks/img08.jpeg', title: 'バレエのレッスン', artist: 'エドガー・ドガ' },
+    { url: 'img/artworks/img09.jpeg', title: '考える人', artist: 'オーギュスト・ロダン' },
+    { url: 'img/artworks/img10.jpeg', title: 'ゲルニカ', artist: 'パブロ・ピカソ' },
+    { url: 'img/artworks/img11.jpeg', title: 'ひまわり', artist: 'フィンセント・ファン・ゴッホ' },
+    { url: 'img/artworks/img12.jpeg', title: '緑の筋のあるマティス夫人の肖像', artist: 'アンリ・マティス' },
+    { url: 'img/artworks/img13.jpeg', title: '接吻', artist: 'グスタフ・クリムト' },
+    { url: 'img/artworks/img14.jpeg', title: '記憶の固執（柔らかい時計）', artist: 'サルバドール・ダリ' },
+    { url: 'img/artworks/img15.jpeg', title: '泉', artist: 'マルセル・デュシャン' },
+    { url: 'img/artworks/img16.jpeg', title: '夜警', artist: 'レンブラント' },
+    { url: 'img/artworks/img17.jpeg', title: 'ピードロを吹く娘', artist: '喜多川歌麿' },
+    { url: 'img/artworks/img18.jpeg', title: '真珠の耳飾りの少女', artist: 'ヨハネス・フェルメール' },
+    { url: 'img/artworks/img19.jpeg', title: '最後の晩餐', artist: 'レオナルド・ダ・ヴィンチ' },
+    { url: 'img/artworks/img20.jpeg', title: 'バベルの塔', artist: 'ピーテル・ブリューゲル' },
 ];
+console.log(ImgList);
 
-const randamImg = images[Math.floor(Math.random() * images.length)];
-
-$('#handsome_imgA1').attr('src', randamImg);
-
-// かぶらない画像を表示させる
-if (randamImg == img01) {
-    const index1 = images.indexOf(img01);
-    images.splice(index1, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img02) {
-    const index2 = images.indexOf(img02);
-    images.splice(index2, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img03) {
-    const index3 = images.indexOf(img03);
-    images.splice(index3, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img04) {
-    const index4 = images.indexOf(img04);
-    images.splice(index4, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img05) {
-    const index5 = images.indexOf(img05);
-    images.splice(index5, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img06) {
-    const index6 = images.indexOf(img06);
-    images.splice(index6, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img07) {
-    const index7 = images.indexOf(img07);
-    images.splice(index7, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img08) {
-    const index8 = images.indexOf(img08);
-    images.splice(index8, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img09) {
-    const index9 = images.indexOf(img09);
-    images.splice(index9, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img10) {
-    const index10 = images.indexOf(img10);
-    images.splice(index10, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img11) {
-    const index11 = images.indexOf(img11);
-    images.splice(index11, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img12) {
-    const index12 = images.indexOf(img12);
-    images.splice(index12, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
-} else if (randamImg == img13) {
-    const index13 = images.indexOf(img13);
-    images.splice(index13, 1);
-    const randamImg = images[Math.floor(Math.random() * images.length)];
-    $('#handsome_imgB1').attr('src', randamImg);
-    console.log(images);
+// 画像を表示
+let output = '';
+for (let i = 0; i < ImgList.length; i++) {
+    output += `<img src="${ImgList[i].url}" alt=""></img>`;
+    $('#artworks').html(output);
 };
 
-// シャッフルボタン
-$(function () {
-    $('#shuffleBtn').on('click', () => {
-        const randamImg = images[Math.floor(Math.random() * images.length)];
-        $('#handsome_imgA1').attr('src', randamImg);
-        $("#playMusic2").get(0).play();
-        if (randamImg == img01) {
-            const index1 = images.indexOf(img01);
-            images.splice(index1, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img02) {
-            const index2 = images.indexOf(img02);
-            images.splice(index2, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img03) {
-            const index3 = images.indexOf(img03);
-            images.splice(index3, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img04) {
-            const index4 = images.indexOf(img04);
-            images.splice(index4, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img05) {
-            const index5 = images.indexOf(img05);
-            images.splice(index5, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img06) {
-            const index6 = images.indexOf(img06);
-            images.splice(index6, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img07) {
-            const index7 = images.indexOf(img07);
-            images.splice(index7, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img08) {
-            const index8 = images.indexOf(img08);
-            images.splice(index8, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img09) {
-            const index9 = images.indexOf(img09);
-            images.splice(index9, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img10) {
-            const index10 = images.indexOf(img10);
-            images.splice(index10, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img11) {
-            const index11 = images.indexOf(img11);
-            images.splice(index11, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img12) {
-            const index12 = images.indexOf(img12);
-            images.splice(index12, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        } else if (randamImg == img13) {
-            const index13 = images.indexOf(img13);
-            images.splice(index13, 1);
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgB1').attr('src', randamImg);
-            console.log(images);
-        };
-        $('#shuffleBtn').clickToggle(function () {
-            const randamImg = images[Math.floor(Math.random() * images.length)];
-            $('#handsome_imgA1').attr('src', randamImg);
-            $("#playMusic2").get(0).play();
-            if (randamImg == img01) {
-                const index1 = images.indexOf(img01);
-                images.splice(index1, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img02) {
-                const index2 = images.indexOf(img02);
-                images.splice(index2, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img03) {
-                const index3 = images.indexOf(img03);
-                images.splice(index3, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img04) {
-                const index4 = images.indexOf(img04);
-                images.splice(index4, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img05) {
-                const index5 = images.indexOf(img05);
-                images.splice(index5, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img06) {
-                const index6 = images.indexOf(img06);
-                images.splice(index6, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img07) {
-                const index7 = images.indexOf(img07);
-                images.splice(index7, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img08) {
-                const index8 = images.indexOf(img08);
-                images.splice(index8, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img09) {
-                const index9 = images.indexOf(img09);
-                images.splice(index9, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img10) {
-                const index10 = images.indexOf(img10);
-                images.splice(index10, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img11) {
-                const index11 = images.indexOf(img11);
-                images.splice(index11, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img12) {
-                const index12 = images.indexOf(img12);
-                images.splice(index12, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            } else if (randamImg == img13) {
-                const index13 = images.indexOf(img13);
-                images.splice(index13, 1);
-                const randamImg = images[Math.floor(Math.random() * images.length)];
-                $('#handsome_imgB1').attr('src', randamImg);
-                console.log(images);
-            };
+// 画像クリック時
+$('#artworks img').on('click', function () {
+    // 画像をグレーに
+    $(this).css("filter", "grayscale(100%)");
+
+    // クリックした要素のデータを抽出
+    const src = $(this).attr('src');
+    console.log(src);
+
+    const url = src;
+    const target = ImgList.find((v) => v.url === url);
+    console.log(target);
+
+    const title = target.title;
+    console.log(title);
+
+    const artist = target.artist;
+    console.log(artist);
+
+    const data = [
+        { "imgsrc": src, "title": title, "artist": artist }
+    ];
+    console.log(data);
+    console.log(title);
+
+    // クリックしたデータを保存
+    const jsonData = JSON.stringify(data);
+    localStorage.setItem('memo', jsonData);
+    console.log(jsonData);
+
+    // ページ読み込み：保存データ取得表示
+    if (localStorage.getItem('memo')) { // 値が保存されていれば
+        const json_get = localStorage.getItem('memo');
+        const data_get = JSON.parse(json_get);
+        console.log(data_get);
+
+        $('#f_artworks').append(`<img src="${src}" alt=""></img>`);
+
+        // ポップアップ
+        $('#f_artworks img').on('click', function () {
+            $('.popup').css("visibility", "visible");
+            $('.popup').addClass('showpop').fadeIn();
+
+            const src2 = $(this).attr('src');
+            console.log(src2);
+
+            const url2 = src2;
+            const target = ImgList.find((v) => v.url === url2);
+            console.log(target);
+
+            const title2 = target.title;
+            console.log(title2);
+
+            const artist2 = target.artist;
+            console.log(artist2);
+
+            $('.content img').attr('src', src2);
+            $('#art_title').html(`<p>${title2}</p>`);
+            $('#art_artist').html(`<p>${artist2}</p>`);
         });
-    });
+
+        $('#close').on('click', function () {
+            $('.popup').fadeOut();
+        });
+    }
 });
 
-// コンテンツ3-3
-// クリックで表示
-$('#handsome_imgA1, #handsome_imgB1').click(function () {
-    $('#contentsArea3_3').css({ 'visibility': 'visible' });
-    $("#playMusic1").get(0).play();
-});
-
-// クリックした画像・文章に変更
+// スクロールで画面下お気に入りボタン表示
 $(function () {
-    $('#handsome_imgA1').on('click', () => {
-        const src = $('#handsome_imgA1').attr('src');
-        $('#chosen_handsome').attr('src', src);
-        const src1 = $('#chosen_handsome').attr('src');
-        if (src1 == img01) {
-            $('#handsome_name').text('BTS V（テテ）');
-            $('#handsome_text').html('BTSのイケメン担当。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('Dynamite<br>Butter<br>Boy With Luv');
-        } else if (src1 == img02) {
-            $('#handsome_name').text('イ・ドンウク');
-            $('#handsome_text').html('トッケビでの死神役が最高！<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('トッケビ<br>真心が届く<br>女の香り');
-        } else if (src1 == img03) {
-            $('#handsome_name').text('キム・スヒョン');
-            $('#handsome_text').html('新・韓流四天王の1人だそう！<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('サイコだけど大丈夫<br>星から来たあなた<br>ドリームハイ');
-        } else if (src1 == img04) {
-            $('#handsome_name').text('キム・ソンホ');
-            $('#handsome_text').html('優しい目がたまらん。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('スタートアップ<br>君のせいで何もできない！<br>100日の朗君様');
-        } else if (src1 == img05) {
-            $('#handsome_name').text('キム・ドンヒ');
-            $('#handsome_text').html('人気急上昇中の若手俳優！<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('梨泰院クラス<br>人間レッスン<br>SKYキャッスル');
-        } else if (src1 == img06) {
-            $('#handsome_name').text('コン・ユ');
-            $('#handsome_text').html('こんなイケオジいたら惚れちゃう。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('トッケビ<br>コーヒープリンス1号店<br>ビッグ');
-        } else if (src1 == img07) {
-            $('#handsome_name').text('ソン・ガン');
-            $('#handsome_text').html('甘いマスクがたまらん。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('わかっていても<br>ナビレラ<br>恋するアプリ Love Alarm');
-        } else if (src1 == img08) {
-            $('#handsome_name').text('ソン・ジュンギ');
-            $('#handsome_text').html('可愛い＆かっこいいのハイブリッド。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('ヴィンチェンツォ<br>太陽の末裔<br>トキメキ☆成均館スキャンダル');
-        } else if (src1 == img09) {
-            $('#handsome_name').text('ASTRO チャ・ウヌ');
-            $('#handsome_text').html('まじで顔面国宝！！<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('HIDE&SEEK<br>Again<br>Crazy Sexy Cool');
-        } else if (src1 == img10) {
-            $('#handsome_name').text('ナム・ジュヒョク');
-            $('#handsome_text').html('笑顔が素敵なのよ・・。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('スタートアップ<br>恋のゴールドメダル<br>ハベクの新婦');
-        } else if (src1 == img11) {
-            $('#handsome_name').text('パク・ソジュン');
-            $('#handsome_text').html('言わずと知れた超人気俳優！<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('梨泰院クラス<br>彼女はキレイだった<br>キム秘書はいったい、なぜ?');
-        } else if (src1 == img12) {
-            $('#handsome_name').text('パク・ボゴム');
-            $('#handsome_text').html('なんて整ったお顔なのでしょうか・・。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('青春の記録<br>雲が描いた月明かり<br>ボーイフレンド');
-        } else if (src1 == img13) {
-            $('#handsome_name').text('ヒョンビン');
-            $('#handsome_text').html('世界的俳優の一人。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('愛の不時着<br>シークレット・ガーデン<br>ジキルとハイドに恋した私');
+    var fBtn = $('#addBtn_area');
+    fBtn.hide();
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            fBtn.fadeIn();
+        } else {
+            fBtn.fadeOut();
         }
-        return false;
-
     });
 });
 
+// 画面下お気に入りボタン　クリックイベント
 $(function () {
-    $('#handsome_imgB1').on('click', () => {
-        const src2 = $('#handsome_imgB1').attr('src');
-        $('#chosen_handsome').attr('src', src2);
-        const src3 = $('#chosen_handsome').attr('src');
-        if (src3 == img01) {
-            $('#handsome_name').text('BTS V（テテ）');
-            $('#handsome_text').html('BTSのイケメン担当。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('Dynamite<br>Butter<br>Boy With Luv');
-        } else if (src3 == img02) {
-            $('#handsome_name').text('イ・ドンウク');
-            $('#handsome_text').html('トッケビでの死神役が最高！<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('トッケビ<br>真心が届く<br>女の香り');
-        } else if (src3 == img03) {
-            $('#handsome_name').text('キム・スヒョン');
-            $('#handsome_text').html('新・韓流四天王の1人だそう！<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('サイコだけど大丈夫<br>星から来たあなた<br>ドリームハイ');
-        } else if (src3 == img04) {
-            $('#handsome_name').text('キム・ソンホ');
-            $('#handsome_text').html('優しい目がたまらん。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('スタートアップ<br>君のせいで何もできない！<br>100日の朗君様');
-        } else if (src3 == img05) {
-            $('#handsome_name').text('キム・ドンヒ');
-            $('#handsome_text').html('人気急上昇中の若手俳優！<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('梨泰院クラス<br>人間レッスン<br>SKYキャッスル');
-        } else if (src3 == img06) {
-            $('#handsome_name').text('コン・ユ');
-            $('#handsome_text').html('こんなイケオジいたら惚れちゃう。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('トッケビ<br>コーヒープリンス1号店<br>ビッグ');
-        } else if (src3 == img07) {
-            $('#handsome_name').text('ソン・ガン');
-            $('#handsome_text').html('甘いマスクがたまらん。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('わかっていても<br>ナビレラ<br>恋するアプリ Love Alarm');
-        } else if (src3 == img08) {
-            $('#handsome_name').text('ソン・ジュンギ');
-            $('#handsome_text').html('可愛い＆かっこいいのハイブリッド。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('ヴィンチェンツォ<br>太陽の末裔<br>トキメキ☆成均館スキャンダル');
-        } else if (src3 == img09) {
-            $('#handsome_name').text('ASTRO チャ・ウヌ');
-            $('#handsome_text').html('まじで顔面国宝！！<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('HIDE&SEEK<br>Again<br>Crazy Sexy Cool');
-        } else if (src3 == img10) {
-            $('#handsome_name').text('ナム・ジュヒョク');
-            $('#handsome_text').html('笑顔が素敵なのよ・・。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('スタートアップ<br>恋のゴールドメダル<br>ハベクの新婦');
-        } else if (src3 == img11) {
-            $('#handsome_name').text('パク・ソジュン');
-            $('#handsome_text').html('言わずと知れた超人気俳優！<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('梨泰院クラス<br>彼女はキレイだった<br>キム秘書はいったい、なぜ?');
-        } else if (src3 == img12) {
-            $('#handsome_name').text('パク・ボゴム');
-            $('#handsome_text').html('なんて整ったお顔なのでしょうか・・。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('青春の記録<br>雲が描いた月明かり<br>ボーイフレンド');
-        } else if (src3 == img13) {
-            $('#handsome_name').text('ヒョンビン');
-            $('#handsome_text').html('世界的俳優の一人。<br>まじでかっこいい。<br>かっこいい。');
-            $('#handsome_work_text').html('愛の不時着<br>シークレット・ガーデン<br>ジキルとハイドに恋した私');
-        }
-        return false;
-    });
-});
-
-// もう1回最初に戻るボタン
-$(function () {
-    $('#againBtn').on('click', () => {
-        $('#contentsArea3_3 a').attr('href', 'index.html');
-        $("#playMusic2").get(0).play();
+    $('#addBtn').on('click', function () {
+        $('#favorits').css("visibility", "visible");
+        $('#inner').css("display", "none");
+        $('#addBtn_area').css("visibility", "hidden");
+        $('body, html').animate({ scrollTop: 0 }, 0);
+        $('#title_wrapper a').text('TOP');
+        $('main').css("background-image", "url(./img/favorite_image.jpg)");
+        $('main p').html('あなた専用のギャラリーページです<br>心ゆくまでお楽しみください');
     });
 });
